@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul id="authorsContainer">
+        {% for author in authors %}
+                <li>
+                    <a href="{% url 'authors-show' author_id=author.id %}">{{ author.name }}</a>
+                </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
